@@ -11,6 +11,7 @@
     <% if (data != null) { data.forEach( item => { %>
     <div class="d-flex flex-row justify-content-between mb-3">
         <div class="d-flex flex-column p-3">
+          <p> This is: <b class="text-primary"><%= item.name%></b></p>
           <a href="<%= item.placeUrl %>" target="_blank"><img src="<%= item.icon %>" class="icon-img"></a>
           <% if (loggedIn) { %>
             <div class="mb-1 p-1">
@@ -18,6 +19,9 @@
               <a href="/place/delete/<%= item._id %>" class="red" onclick="return confirm('Are you sure you wish to delete this place?');">Delete</a>
             </div>
           <% } %>
+        </div>
+        <div class="text-primary">
+          
         </div>
         <div class="place-code pt-4 pl-4">
           <a href="<%= item.placeUrl %>" target="_blank">
