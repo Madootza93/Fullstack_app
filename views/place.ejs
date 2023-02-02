@@ -3,11 +3,11 @@
 <% if (error != '') { %>
     <%= error %>
 <% } else { %>
-<h2 class="page-title">New Place to Visit</h2>
+<h2 class="page-title">Change Details:</h2>
 <form action="/place/save" method="POST">
     <div class="place-edit">
         <div class="place-name"><input type="text" name="placeName" value="<%= item[0].name %>"></div>
-        <div class="place-icon-link"><input type="text" name="placeIcon" value="<%= item[0].icon %>"> <img src="<%= item[0].icon %>"></div>
+        <div class="place-icon-link"><input id="icon1" type="text" name="placeIcon" value="<%= item[0].icon %>"> <img id="icon2" src="<%= item[0].icon %>"></div>
         <div class="place-url"><input type="text" name="placeUrl" value="<%= item[0].placeUrl %>"></div>
         <div class="place-btn">
             <button type="submit" class="btn btn-primary">Save</button>
