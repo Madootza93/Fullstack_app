@@ -62,7 +62,7 @@ router.post('/save', async(req, res) => {
             $set: {
                 name: placeName,
                 icon: placeIcon,
-                menuUrl: placeUrl
+                placeUrl: placeUrl,
             }
         }
 
